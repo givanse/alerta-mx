@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AlertaMx</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/alerta-mx.css">
+  </head>
+  <body>
+    <script>
+      window.AlertaMxENV = {{ENV}};
+      window.EmberENV = window.AlertaMxENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/alerta-mx.js"></script>
+    <script>
+      window.AlertaMx = require('alerta-mx/app')['default'].create(AlertaMxENV.APP);
+    </script>
+  </body>
+</html>
