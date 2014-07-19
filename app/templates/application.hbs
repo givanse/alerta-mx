@@ -1,12 +1,24 @@
 <header>
-  {{link-to "Menu" ""}}
+  <div id="left">
+    {{link-to "Menu" ""}}
+  </div>
+
+  <div id="right">
+    {{#link-to "civil"}}
+      <img src="img/pcivil.png" alt="protección civil" class="menu_icon">
+    {{/link-to}}
+  </div>
+
+  <div style="clear: both;"></div>
 </header>
 
 {{outlet}}
 
-<nav>
-  {{link-to "Mi Ubicación" ""}}<br>
-  {{link-to "Estados" ""}}<br>
-  {{link-to "Preferencias" ""}}<br>
-  {{link-to "Ayuda" ""}}<br>
+<nav id ="drawer">
+  {{#link-to "civil"}}
+    <img src="img/pcivil.png" alt="protección civil" class="menu_icon">
+    P. Civil
+  {{/link-to}}
+  {{link-to "Preferencias" "preferences"}}
+  {{link-to "Ayuda" "help"}}
 </nav>

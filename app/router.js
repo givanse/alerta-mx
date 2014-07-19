@@ -5,6 +5,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('civil');
+  this.route('help');
+  this.route('preferences');
 });
 
 export default Router;

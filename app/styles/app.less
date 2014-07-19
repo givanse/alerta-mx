@@ -11,33 +11,55 @@ body > .ember-view {
 body > .ember-view {
 }
 
-@hn_padding: 1rem;
-
-header, nav {
-  background-color: #4F005E;
+header, nav#drawer {
+  background-color: #F0F0F0;
   font-size: 2rem;
   font-weight: bold;
-  padding: @hn_padding;
 }
 
 @header_height: 6rem;
 
+@hn_padding: 1rem;
+
 header {
-  line-height: 4rem;
+  border: 0px solid #e0e0e0;
+  border-bottom-width: 0.2rem;
   height: @header_height;
+  line-height: 4rem;
   margin-bottom: 1rem;
   position: relative;
+  padding: @hn_padding;
   z-index: 10;
 }
 
-nav {
+header div#left {
+  float: left;
+}
+
+header div#right {
+  float: right;
+  padding-right: 1em;
+}
+
+nav#drawer {
   height: 100%;
   max-width: 60%;
   position: fixed;
-  padding-right: @hn_padding * 5;
-  padding-top: @hn_padding + @header_height;
+  padding-top: @header_height;
   top: 0px;
   z-index: 1;
+}
+
+nav#drawer a {
+  border: 0px solid #e0e0e0;
+  border-bottom-width: 0.2rem;
+  display: block;
+  padding: @hn_padding;
+  padding-right: @hn_padding * 5;
+}
+
+img.menu_icon {
+  width: 3rem;
 }
 
 /*EOF*/
