@@ -1,11 +1,11 @@
 <header>
   <div id="left">
-    {{link-to "Menu" ""}}
+    <div id="menu" {{action "toggleDrawer"}}>Menu</div>
   </div>
 
   <div id="right">
     {{#link-to "civil"}}
-      <img src="img/pcivil.png" alt="protección civil" class="menu_icon">
+      <img src="img/pcivil.png" alt="protección civil" class="menu_icon" {{action "shrinkDrawer"}}>
     {{/link-to}}
   </div>
 
@@ -14,11 +14,10 @@
 
 {{outlet}}
 
-<nav id ="drawer">
-  {{#link-to "civil"}}
+<nav id="drawer" {{bind-attr class="drawerVisible:expand:shrink"}}>
+  {{#nav-link label="P. Civil" route="civil" action="toggleDrawer"}}
     <img src="img/pcivil.png" alt="protección civil" class="menu_icon">
-    P. Civil
-  {{/link-to}}
-  {{link-to "Preferencias" "preferences"}}
-  {{link-to "Ayuda" "help"}}
+  {{/nav-link}}
+  {{nav-link label="Preferencias" route="preferences" action="toggleDrawer"}}
+  {{nav-link label="Ayuda" route="help" action="toggleDrawer"}}
 </nav>
