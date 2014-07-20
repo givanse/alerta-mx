@@ -83,10 +83,16 @@ nav#drawer {
   z-index: 1;
 }
 
+@menu_icon_width: 3rem;
+
+.menu_icon {
+  width: @menu_icon_width;
+}
+
 @a_padding_right: @hn_padding * 5;
 
-/* 12rem is the longest word */
-@drawer_a_width: @hn_padding + 12rem + @a_padding_right;
+/* 12rem chars of the longest word */
+@drawer_a_width: @menu_icon_width + @hn_padding + 12rem + @a_padding_right;
 
 nav#drawer a {
   border: 0px solid #e0e0e0;
@@ -95,10 +101,6 @@ nav#drawer a {
   padding: @hn_padding;
   padding-right: @a_padding_right;
   width: @drawer_a_width;
-}
-
-img.menu_icon {
-  width: 3rem;
 }
 
 #app_outlet {

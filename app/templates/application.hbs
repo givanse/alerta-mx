@@ -4,7 +4,7 @@
   </div>
 
   <div id="right">
-    {{#link-to "civil"}}
+    {{#link-to "messages"}}
       <img src="img/pcivil.png" alt="protección civil" class="menu_icon" {{action "shrinkDrawer"}}>
     {{/link-to}}
   </div>
@@ -17,10 +17,10 @@
 </div>
 
 <nav id="drawer" {{bind-attr class="drawerVisible:expand:shrink"}}>
-  {{nav-link label="Alertas" route="alert"}}
+  {{nav-link label="Alertas" route="alerts"}}
   {{nav-link label="Atlas" route="atlas"}}
 
-  {{#nav-link label="P. Civil" route="civil"}}
+  {{#nav-link label="Mensajes" route="messages"}}
     <img src="img/pcivil.png" alt="protección civil" class="menu_icon">
   {{/nav-link}}
 

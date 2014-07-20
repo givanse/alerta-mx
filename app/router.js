@@ -5,11 +5,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('civil');
-  this.route('help');
-  this.route('preferences');
+  this.route('alerts');
   this.route('atlas');
-  this.route('alert');
+  this.route('help');
+  this.route('messages');
+  this.route('preferences');
 });
 
 export default Router;
