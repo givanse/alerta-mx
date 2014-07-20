@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   drawerVisible: false,
 
-  events: {
+  actions: {
     toggleDrawer: function() {
       this.toggleProperty('drawerVisible');
     },

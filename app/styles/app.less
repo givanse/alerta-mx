@@ -24,20 +24,25 @@ header, nav#drawer {
   background-color: #F0F0F0;
   font-size: 2rem;
   font-weight: bold;
+  position: fixed;
+  top: 0px;
 }
 
-@header_height: 6rem;
 @hn_padding: 1rem;
+
+@header_height: 6rem;
+@header_border_bottom_w: 0.2rem;
+@header_total_height: @header_height + 
+                      @header_border_bottom_w;
 
 header {
   border: 0px solid #e0e0e0;
-  border-bottom-width: 0.2rem;
+  border-bottom-width: @header_border_bottom_w;
   height: @header_height;
   line-height: 4rem;
-  margin-bottom: 1rem;
-  position: relative;
   padding: @hn_padding;
-  z-index: 10;
+  width: 100%;
+  z-index: 10; /* above drawer */
 }
 
 header #menu {
@@ -48,6 +53,10 @@ header #menu {
 
 header #menu:hover {
   color: #2a6496;
+}
+
+#header_placeholder {
+  height: @header_total_height;
 }
 
 nav#drawer {
@@ -77,9 +86,7 @@ header div#right {
 
 nav#drawer {
   height: 100%;
-  position: fixed;
   padding-top: @header_height;
-  top: 0px;
   z-index: 1;
 }
 
@@ -114,6 +121,27 @@ nav#drawer a {
   padding-bottom: 1rem;
 }
 
+.notice {
+  color: #8d8d8d;
+}
+
+.CAP_entry {
+  border: 1px solid #d8d8d8;
+  border-radius: 7px;
+  margin: 4px;
+}
+
+.CAP_entry .meta {
+  font-size: 0.9rem;
+}
+
+.CAP_entry .content {
+}
+
+.CAP_entry .more_info {
+  font-size: 0.9rem;
+  color: #976700;
+}
 
 @media screen and (min-width: 320px) { 
   html { font-size: 12px; }
