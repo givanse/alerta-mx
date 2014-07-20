@@ -17,9 +17,13 @@
 </div>
 
 <nav id="drawer" {{bind-attr class="drawerVisible:expand:shrink"}}>
-  {{#nav-link label="P. Civil" route="civil" action="toggleDrawer"}}
+  {{nav-link label="Alertas" route="alert"}}
+  {{nav-link label="Atlas" route="atlas"}}
+
+  {{#nav-link label="P. Civil" route="civil"}}
     <img src="img/pcivil.png" alt="protección civil" class="menu_icon">
   {{/nav-link}}
-  {{nav-link label="Preferencias" route="preferences" action="toggleDrawer"}}
-  {{nav-link label="Ayuda" route="help" action="toggleDrawer"}}
+
+  {{nav-link label="Preferencias" route="preferences"}}
+  {{nav-link label="Ayuda" route="help"}}
 </nav>

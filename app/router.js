@@ -8,6 +8,8 @@ Router.map(function() {
   this.route('civil');
   this.route('help');
   this.route('preferences');
+  this.route('atlas');
+  this.route('alert');
 });
 
 export default Router;
