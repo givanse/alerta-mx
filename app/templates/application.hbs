@@ -12,7 +12,9 @@
   <div style="clear: both;"></div>
 </header>
 
-{{outlet}}
+<div id="app_outlet" class="container">
+  {{outlet}}
+</div>
 
 <nav id="drawer" {{bind-attr class="drawerVisible:expand:shrink"}}>
   {{#nav-link label="P. Civil" route="civil" action="toggleDrawer"}}
