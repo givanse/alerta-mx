@@ -2,7 +2,9 @@
   "predef": {
     "document": true,
     "window": true,
-    "AlertaMxENV": true
+    "AlertaMxENV": true,
+    "L": true,
+    "EmberLeaflet": true
   },
   "browser" : true,
   "boss" : true,

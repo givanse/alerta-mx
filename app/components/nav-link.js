@@ -10,6 +10,7 @@ export default Ember.Component.extend({
 
   click: function() {
     var route = this.get("route");
+    // handled in ApplicationController
     this.sendAction("action", route);
   }
 });

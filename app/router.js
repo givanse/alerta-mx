@@ -7,7 +7,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('alerts', {path: '/'});
   this.route('alerts-xml');
-  this.route('atlas');
+  this.route('map');
   this.route('help');
   this.route('messages');
   this.route('preferences');

@@ -18,6 +18,8 @@ export default Ember.Route.extend({
       Ember.Logger.debug("ApplicationRoute..setRouteOnHold");
       Ember.Logger.debug(route);
       this.set("routeOnHold", route);
+
+      return false;
     }
   }
 
