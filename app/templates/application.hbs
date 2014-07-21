@@ -5,8 +5,11 @@
 
   <div id="right">
     {{#link-to "messages"}}
-      <img src="img/pcivil.png" alt="protección civil" class="menu_icon" {{action "shrinkDrawer"}}>
     {{/link-to}}
+
+    {{#nav-link label="" route="messages" action="shrinkDrawer"}}
+      <img src="img/pcivil.png" alt="protección civil" class="menu_icon">
+    {{/nav-link}}
   </div>
 
   <div style="clear: both;"></div>
@@ -18,14 +21,4 @@
   {{outlet}}
 </div>
 
-<nav id="drawer" {{bind-attr class="drawerVisible:expand:shrink"}}>
-  {{nav-link label="Alertas" route="alerts"}}
-  {{nav-link label="Atlas" route="atlas"}}
-
-  {{#nav-link label="Mensajes" route="messages"}}
-    <img src="img/pcivil.png" alt="protección civil" class="menu_icon">
-  {{/nav-link}}
-
-  {{nav-link label="Preferencias" route="preferences"}}
-  {{nav-link label="Ayuda" route="help"}}
-</nav>
+{{view "drawer" id="drawer" isDrawerVisible=isDrawerVisible}}

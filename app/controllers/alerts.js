@@ -2,22 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
-  capXML: function() {
-    var model = this.get("model");
-    Ember.Logger.debug("capXML, model");
-    Ember.Logger.debug(model);
-    
-    return model; 
-  }.property("model"),
-
-  capPOJO: function() {
-    var capXML = this.get("capXML");
+  convertCAPXMLtoPOJO: function(capXML) {
     var feed$ = Ember.$(capXML).children("feed");
     var capPOJO = {
       rights: feed$.children("rights").text(),
       updated: feed$.children("updated").text(),
       entries: []
-    }
+    };
 
     feed$.children("entry").each(function() {
       var entry$ = Ember.$(this);
@@ -37,8 +28,22 @@ export default Ember.Controller.extend({
       };
       capPOJO.entries.push(entry);
     });
-
+ 
     return capPOJO;
-  }.property("capXML")
+  },
+
+  capPOJO: function() {
+
+    var Promiseable = Ember.ObjectProxy.extend(Ember.PromiseProxyMixin);
+
+    var _this = this;
+    var promise = new Ember.RSVP.Promise(function(resolve, reject) {
+      var capXML = _this.get("model");
+      var capPOJO = _this.convertCAPXMLtoPOJO(capXML);
+      resolve(capPOJO);
+    });
+
+    return Promiseable.create({promise: promise});
+  }.property("model")
 
 });

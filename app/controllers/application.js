@@ -1,15 +1,25 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  drawerVisible: false,
+  isDrawerVisible: false,
 
   actions: {
-    toggleDrawer: function() {
-      this.toggleProperty('drawerVisible');
+    toggleDrawer: function(route) {
+      Ember.Logger.debug("ApplicationController..toggleDrawer");
+      this.toggleProperty('isDrawerVisible');
+      this.send("setRouteOnHold", route);
     },
 
-    shrinkDrawer: function() {
-      this.set('drawerVisible', false);
+    shrinkDrawer: function(route) {
+
+      this.send("setRouteOnHold", route);
+
+      if ( this.get("isDrawerVisible") ) {
+        this.set("isDrawerVisible", false);
+      } else {
+        // its hidden, counts as done
+        this.send("drawerTransitionDone", route);
+      }
     }
   }
 });

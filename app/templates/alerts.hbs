@@ -1,10 +1,23 @@
 <h2>Alertas</h2>
 
 <p class="notice">
-  Proof of concept<br>
-  source code: public/sampleCAP.xml<br>
-  Consumed XML as a POJO:
+  Proof of technical feasibility<br>
+  muestra de datos: public/sampleCAP.xml<br>
+  método: parseando XML y construyendo POJOs
 </p>
+
+{{#if capPOJO.isPending}}
+  Procesando CAP
+  <img id="parsing_CAP" src="img/loading.gif"> 
+{{/if}}
+
+{{#if capPOJO.isRejected}}
+  Error al leer CAP.
+{{/if}}
+
+{{#if capPOJO.isFulfilled}}
+  CAP procesado.
+{{/if}}
 
 <div class="row">
   <div class="col-sm-6 col-lg-3">
