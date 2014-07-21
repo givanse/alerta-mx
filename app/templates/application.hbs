@@ -1,18 +1,23 @@
 <header>
-  <div id="left">
-    <div id="menu" {{action "toggleDrawer"}}>Menu</div>
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-xs-3 left">
+        <div id="menu" {{action "toggleDrawer"}}>Menu</div>
+      </div>
+
+      <div class="col-xs-9 right">
+        {{#nav-link route="messages" action="shrinkDrawer"}}
+          <img src="img/pcivil.png" alt="protección civil" class="menu_icon">
+        {{/nav-link}}
+
+        {{#nav-link action="shrinkDrawer"}}
+          <img src="img/phone.png" alt="protección civil" class="menu_icon" {{action "emergencyCall"}}>
+        {{/nav-link}}
+      </div>
+    </div>
+
   </div>
-
-  <div id="right">
-    {{#link-to "messages"}}
-    {{/link-to}}
-
-    {{#nav-link label="" route="messages" action="shrinkDrawer"}}
-      <img src="img/pcivil.png" alt="protección civil" class="menu_icon">
-    {{/nav-link}}
-  </div>
-
-  <div style="clear: both;"></div>
 </header>
 
 <div id="app_outlet" class="container">

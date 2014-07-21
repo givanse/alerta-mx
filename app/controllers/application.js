@@ -20,6 +20,10 @@ export default Ember.Controller.extend({
         // its hidden, counts as done
         this.send("drawerTransitionDone", route);
       }
+    },
+
+    emergencyCall: function() {
+      alert("Llamando a protección civil.");
     }
   }
 });

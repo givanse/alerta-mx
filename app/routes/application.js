@@ -20,6 +20,13 @@ export default Ember.Route.extend({
       this.set("routeOnHold", route);
 
       return false;
+    },
+
+    /* Place this high up so it catches events triggered from both 
+       Messages and Alerts.
+     */
+    shareCAPEntry: function() {
+      alert("social media share: twitter, facebook etc.");
     }
   }
 

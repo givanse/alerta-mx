@@ -8,14 +8,16 @@ export default EmberLeaflet.MapView.extend({
   content: [
     {
       locations: [[19.006230, -99.538790], [17.770854, -101.889864], [16.511083, -99.346529]],
-      options: {color: "brown"}}, 
+      options: {color: "brown", fill: true, className: "poly_brown"}
+    }, 
     {
       locations: [[28.174867, -104.545809], [27.971298, -100.821444], 
                  [27.971298, -100.821444], [25.429570, -104.073397]],
-      options: {color: "yellow"}
+      options: {color: "yellow", fill: true, className: "poly_yellow"}
     }
   ],
 
+  // TODO: fix, the polygons are not shown
   childLayers: [EmberLeaflet.DefaultTileLayer, 
                 PolygonCollectionLayer],
 
