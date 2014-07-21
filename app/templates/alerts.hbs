@@ -1,57 +1,11 @@
 <h2>Alertas</h2>
 
-<p class="notice">
-  Proof of technical feasibility<br>
-  muestra de datos: public/sampleCAP.xml<br>
-  método: parseando XML y construyendo POJOs
-</p>
+{{#each foo in model}}
 
-{{#if capPOJO.isPending}}
-  Procesando CAP
-  <img id="parsing_CAP" src="img/loading.gif"> 
-{{/if}}
+    {{#each entry in foo.entries}}
 
-{{#if capPOJO.isRejected}}
-  Error al leer CAP.
-{{/if}}
+      {{partial "cap-entry"}}
+   
+    {{/each}}
 
-{{#if capPOJO.isFulfilled}}
-  CAP procesado.
-{{/if}}
-
-<div class="row">
-  <div class="col-sm-6 col-lg-3">
-    {{capPOJO.updated}}
-  </div>
-  <div class="col-sm-6 col-lg-3">
-    {{capPOJO.rights}}
-  </div>
-</div>
-
-{{#each entry in capPOJO.entries}}
-  <div class="container CAP_entry">
-    <div class="row meta">
-      <div class="col-xs-3">
-        {{entry.updated}}
-      </div>
-      <div class="col-xs-9">
-        {{entry.title}}
-      </div>
-    </div>
-
-    <div class="row content">
-      <div class="col-xs-12">
-        {{entry.area.description}}
-      </div>
-    </div>
-
-    <div class="row more_info">
-      <div class="col-xs-3">
-        {{entry.sender}}
-      </div>
-      <div class="col-xs-9">
-        {{entry.area.geoJSON}}
-      </div>
-    </div>
-  </div>
 {{/each}}

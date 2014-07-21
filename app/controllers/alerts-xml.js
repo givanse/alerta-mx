@@ -37,7 +37,7 @@ export default Ember.Controller.extend({
     var Promiseable = Ember.ObjectProxy.extend(Ember.PromiseProxyMixin);
 
     var _this = this;
-    var promise = new Ember.RSVP.Promise(function(resolve, reject) {
+    var promise = new Ember.RSVP.Promise(function(resolve) {
       var capXML = _this.get("model");
       var capPOJO = _this.convertCAPXMLtoPOJO(capXML);
       resolve(capPOJO);
