@@ -20,8 +20,8 @@ var app = new EmberApp();
 app.import('vendor/bootstrap/dist/js/bootstrap.js');
 app.import('vendor/bootstrap/dist/css/bootstrap.css');
 
-app.import('vendor/leaflet-dist/leaflet-src.js')
-app.import('vendor/leaflet-dist/leaflet.css')
+app.import('vendor/leaflet-dist/leaflet-src.js');
+app.import('vendor/leaflet-dist/leaflet.css');
 app.import('vendor/ember-leaflet/dist/ember-leaflet.js');
 
 module.exports = app.toTree();
