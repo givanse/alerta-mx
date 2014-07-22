@@ -1,5 +1,3 @@
-# Alerta-mx
-
 This README outlines the details of collaborating on this Ember application.
 
 ## Installation
