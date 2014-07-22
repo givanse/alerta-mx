@@ -1,7 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  classNameBindings: ['isRead:cape_read'],
+
   isDetailsVisible: false,
+
+  isRead: false,
 
   actions: {
 
@@ -11,6 +15,10 @@ export default Ember.Component.extend({
 
     toggleDetails: function() {
       this.toggleProperty("isDetailsVisible");
+    },
+  
+    toggleRead: function() {
+      this.toggleProperty("isRead");
     }
   } 
 });
