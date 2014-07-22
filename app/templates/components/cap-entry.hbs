@@ -1,0 +1,74 @@
+<div class="row cape_header">
+
+  <div class="col-xs-1">
+    <img src="img/checkmark.png" class="checkmark">
+  </div>
+
+  <div class="col-xs-9">
+    {{entry.updated}} - hace 1 semana
+  </div>
+
+</div>
+
+<div class="row cape_title">
+
+  <div class="col-xs-1">
+    <a href="" {{action "toggleDetails"}} class="toggle_details">
+      {{#if isDetailsVisible}}
+        <img src="img/minus.png" class="minus">
+      {{else}}
+        <img src="img/plus.png" class="plus">
+      {{/if}}
+    </a>
+  </div>
+
+  <div class="col-xs-10">
+    {{entry.headline}}
+  </div>
+
+</div>
+
+{{#if isDetailsVisible}}
+
+  <div class="row cape_description">
+
+    <div class="col-xs-1">
+    </div>
+
+    <div class="col-xs-10">
+      {{entry.area.description}}
+      <br>
+      cat: {{entry.parameters.categoria}}
+      <br>
+      <span class="cape_source">
+        <a {{bind-attr href=entry.web}} target="_blank">
+          {{entry.senderName}}
+        </a>
+      </span>
+      <br>
+      {{entry.contact}}
+    </div>
+
+  </div>
+
+  <div class="row cape_actions">
+    <div class="col-xs-9">
+    </div>
+
+    <div class="col-xs-1">
+      {{#link-to "map"}}
+        <img src="img/map_location.png" alt="map location icon" class="cape_action_icon">
+      {{/link-to}}
+    </div>
+
+    <div class="col-xs-1">
+      <img src="img/share.png" alt="share icon" class="cape_action_icon" {{action "shareCAPEntry"}}>
+    </div>
+
+    <div class="col-xs-1">
+    </div>
+  </div>
+
+{{/if}}
+
+<hr>

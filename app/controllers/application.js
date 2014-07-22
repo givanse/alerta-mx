@@ -23,7 +23,7 @@ export default Ember.Controller.extend({
     },
 
     emergencyCall: function() {
-      alert("Llamando a protección civil.");
+      alert("Ring! Ring! Llamando a protección civil.");
     }
   }
 });
