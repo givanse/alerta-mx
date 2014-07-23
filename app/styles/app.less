@@ -3,14 +3,14 @@ html {
   font-size: 10px;
 }
 
+body {
+  font-size: 1.2rem;
+}
+
 html, body,
 body > .ember-view {
   height: 100%;
   width: 100%;
-}
-
-body {
-  font-size: 1.2rem;
 }
 
 a:hover {
@@ -253,6 +253,7 @@ header .nav_link {
   text-align: center;
 }
 
+/*
 @media screen and (min-width: 320px) { 
   html { font-size: 12px; }
 }
@@ -263,6 +264,25 @@ header .nav_link {
 
 @media screen and (min-width: 768px) { 
   html { font-size: 16px; }
+}
+*/
+
+/* pixel ratio */
+
+@media screen and (-webkit-min-device-pixel-ratio: 0.75) { /* 120 ldpi */
+  html { font-size: 14px; }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1) { /* 160 mdpi */
+  html { font-size: 16px; }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) { /* 240 hdpi */
+  html { font-size: 24px; }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) { /* 320 xhdpi */
+  html { font-size: 32px; }
 }
 
 /*EOF*/
