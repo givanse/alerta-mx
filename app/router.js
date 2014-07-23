@@ -9,7 +9,6 @@ Router.map(function() {
   this.route('alerts-xml');
   this.resource('map');
   this.route('help');
-  this.route('messages');
   this.route('preferences');
 });
 

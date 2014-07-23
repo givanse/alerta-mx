@@ -149,19 +149,23 @@ header .nav_link {
   margin: 4px;
 }
 
+@cape_header_color: #AC6A2D;
+
 .cap_entry .updated {
-  color: #7598D6;
+  color: @cape_header_color;
   font-size: 0.9rem;
 }
+
+@read_color: #8d8d8d;
 
 .cape_read, 
 .cape_read .cape_header {
-  color: #8d8d8d;
-  font-size: 0.9rem;
+  color: @read_color;
+  font-size: 0.8rem;
 }
 
 .cape_header {
-  color: #73D3CB;
+  color: @cape_header_color;
   font-size: 1rem;
 }
 
@@ -178,7 +182,15 @@ header .nav_link {
   color: #976700;
 }
 
-.cape_title {
+@clickable_color: #428bca;
+
+.cape_headline {
+  color: @clickable_color;
+  cursor: pointer;
+}
+
+.cape_read .cape_headline {
+  color: @read_color;
 }
 
 .cape_source {
