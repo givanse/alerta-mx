@@ -1,7 +1,6 @@
-<div class="row cape_header" {{action "toggleRead"}}>
+<div class="row cape_header">
 
   <div class="col-xs-1">
-    <img src="img/checkmark.png" class="checkmark">
   </div>
 
   <div class="col-xs-9">
@@ -28,6 +27,15 @@
 
 </div>
 
+<div class="row">
+  <div class="col-xs-1">
+  </div>
+
+  <div class="col-xs-10">
+    {{entry.area.description}}
+  </div>
+</div>
+
 {{#if isDetailsVisible}}
 
   <div class="row cape_description">
@@ -36,8 +44,6 @@
     </div>
 
     <div class="col-xs-10">
-      {{entry.area.description}}
-      <br>
       cat: {{entry.parameters.categoria}}
       <br>
       <span class="cape_source">
@@ -50,6 +56,8 @@
     </div>
 
   </div>
+
+{{/if}}
 
   <div class="row cape_actions">
     <div class="col-xs-8">
@@ -71,7 +79,5 @@
     <div class="col-xs-1">
     </div>
   </div>
-
-{{/if}}
 
 <hr>

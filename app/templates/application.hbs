@@ -2,18 +2,25 @@
   <div class="container">
     <div class="row">
       
-      <div class="col-xs-6 left">
+      <div class="col-xs-3">
         <div id="menu" {{action "toggleDrawer"}}>
           <img src="img/hamburger.png" class="menu_icon">
-          Menu
         </div>
       </div>
 
-      <div class="col-xs-6 right">
+      <div class="col-xs-3">
         {{#nav-link route="alerts" action="shrinkDrawer"}}
           <img src="img/alert.png" class="menu_icon">
         {{/nav-link}}
+      </div>
 
+      <div class="col-xs-3">
+        {{#nav-link route="map" action="shrinkDrawer"}}
+          <img src="img/map.png" class="menu_icon">
+        {{/nav-link}}
+      </div>
+
+      <div class="col-xs-3">
         {{#nav-link action="shrinkDrawer"}}
           <img src="img/phone.png" class="menu_icon" {{action "emergencyCall"}}>
         {{/nav-link}}

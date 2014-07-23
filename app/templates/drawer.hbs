@@ -1,10 +1,14 @@
 
-{{#nav-link label="Mapa" route="map"}}
+{{#nav-link label="Alertas" route="alerts"}}
+  <img src="img/alert.png" alt="alert icon" class="menu_icon">
+{{/nav-link}}
+
+{{#nav-link label="Ver en mapa" route="map"}}
   <img src="img/map.png" alt="map icon" class="menu_icon">
 {{/nav-link}}
 
-{{#nav-link label="Alertas" route="alerts"}}
-  <img src="img/alert.png" alt="alert icon" class="menu_icon">
+{{#nav-link label="Emergencia" action="shrinkDrawer"}}
+  <img src="img/phone.png" class="menu_icon" {{action "emergencyCall"}}>
 {{/nav-link}}
 
 {{nav-link label="Preferencias" route="preferences"}}
